@@ -10,6 +10,7 @@ python clean-browser *url*
 """
 
 url = sys.argv[1]
+# TODO: assert url starts with "https://"
 
 def find_browser():
     paths = [
