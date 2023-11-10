@@ -12,6 +12,7 @@ python clean-browser.py *url*
 url = sys.argv[1] if sys.argv[1].startswith("http") else "https://" + sys.argv[1]
 
 def find_browser():
+    # TODO: make this a dict so we can choose the preferred browser
     paths = [
         "C:\Program Files\Google\Chrome\Application\chrome.exe",
         "C:\Program Files\BraveSoftware\Brave-Browser\Application\\brave.exe",
