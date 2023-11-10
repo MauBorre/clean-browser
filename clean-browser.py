@@ -5,7 +5,7 @@ import sys
 
 """
 run:
-python clean-browser *url*
+python clean-browser.py *url*
 
 """
 
