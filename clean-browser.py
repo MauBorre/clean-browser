@@ -8,7 +8,7 @@ run:
 python clean-browser.py *url*
 
 """
-
+# TODO: integrate an argument parse option so we could call e.g. -chrome -edge, etc...
 url = sys.argv[1] if sys.argv[1].startswith("http") else "https://" + sys.argv[1]
 
 def find_browser():
