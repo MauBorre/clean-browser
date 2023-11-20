@@ -14,3 +14,6 @@ or
 
 ![alt text](https://github.com/MauBorre/clean-browser/blob/main/example.png?raw=true)
 
+This project is inspired on https://github.com/ClimenteA/flaskwebgui 🚀
+Please check it out
+
