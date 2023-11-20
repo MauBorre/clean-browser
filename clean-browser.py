@@ -20,6 +20,10 @@ args = sys.argv
 sites_dict = {
     "github": "https://github.com",
     "twitch": "https://twitch.tv",
+    "youtube": "https://youtube.com",
+    "google": "https://google.com",
+    "twitter": "https://twitter.com",
+    "gmail": "https://gmail.com",
 }
 
 for argument in args[1:]:
