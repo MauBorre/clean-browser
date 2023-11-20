@@ -1,5 +1,5 @@
 # clean-browser
-Open your favorite website as a desktop app (windows only)
+# Open your favorite website as a desktop app (windows only)
 
 run:
 `python clean-browser.py $url` <br>
