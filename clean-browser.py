@@ -1,5 +1,4 @@
 import os
-from threading import Thread
 import subprocess
 import sys
 import argparse
@@ -72,6 +71,4 @@ for argument in args[1:]:
         subprocess.run(browser_command)
 
     print(f"opening url: {url}")
-    browser_thread = Thread(target=start_browser)
-
-    browser_thread.start()
+    start_browser()
