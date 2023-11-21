@@ -23,6 +23,8 @@ sites_dict = {
     "google": "https://google.com",
     "twitter": "https://twitter.com",
     "gmail": "https://gmail.com",
+    "soundcloud": "https://soundcloud.com",
+    "reddit": "https://reddit.com"
 }
 
 for argument in args[1:]:
@@ -34,8 +36,6 @@ for argument in args[1:]:
         # its an incomplete url so...
         else:
             return argument if argument.startswith("http") else "https://" + argument
-
-
 
     url = match_or_literal(argument)
 
@@ -58,10 +58,8 @@ for argument in args[1:]:
             f"--user-data-dir=",
             "--new-window",
             "--no-first-run",
+            f"--app={url}"
         ]
-
-        flags.extend([f"--app={url}"])
-
         return flags
 
     browser_path = find_browser()
