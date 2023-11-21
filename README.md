@@ -6,11 +6,11 @@ run:
 
 or
 
-`python clean-browser.py github twitch` <- NEW name the site. Wish it was more flexible tho <br>
+`python clean-browser.py github twitch` <- name the site. Wish it was more flexible tho <br>
 
 or
 
-`python clean-browser.py github soundcloud.com` <- NEW combine urls with sites<br>
+`python clean-browser.py github soundcloud.com` <- combine urls with sites<br>
 
 ![alt text](https://github.com/MauBorre/clean-browser/blob/main/example.png?raw=true)
 
