@@ -1,6 +1,7 @@
 import os
 import subprocess
 import sys
+from threading import Thread
 import argparse
 
 """
@@ -24,7 +25,8 @@ sites_dict = {
     "twitter": "https://twitter.com",
     "gmail": "https://gmail.com",
     "soundcloud": "https://soundcloud.com",
-    "reddit": "https://reddit.com"
+    "reddit": "https://reddit.com",
+    "chatgpt": "https://chat.openai.com",
 }
 
 for argument in args[1:]:
@@ -68,4 +70,5 @@ for argument in args[1:]:
         subprocess.run(browser_command)
 
     print(f"opening url: {url}")
-    start_browser()
+    browser_thread = Thread(target=start_browser)
+    browser_thread.start()
