@@ -30,10 +30,9 @@ sites_dict = {
 for argument in args[1:]:
 
     def match_or_literal(argument):
-        # matches sites_dict key? return sites_dict value
         if argument in sites_dict.keys():
             return sites_dict[argument]
-        # its an incomplete url so...
+        # it might be an incomplete url so:
         else:
             return argument if argument.startswith("http") else "https://" + argument
 
