@@ -1,5 +1,6 @@
 # clean-browser
 ### Open your favorite website as a desktop app (windows only)
+#### Very useful for working with multiple browser windows and gain visualization space
 
 run:
 `python clean-browser.py $url` <br>
@@ -14,6 +15,6 @@ or
 
 ![alt text](https://github.com/MauBorre/clean-browser/blob/main/example.png?raw=true)
 
-This project is inspired on https://github.com/ClimenteA/flaskwebgui 🚀
+This script is inspired on https://github.com/ClimenteA/flaskwebgui 🚀
 Please check it out
 
