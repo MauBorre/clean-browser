@@ -7,7 +7,7 @@ run:
 
 or
 
-`python clean-browser.py github twitch` <- name the site. Wish it was more flexible tho <br>
+`python clean-browser.py github twitch` <- name the site <br>
 
 or
 
