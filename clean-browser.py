@@ -27,6 +27,7 @@ sites_dict = {
     "soundcloud": "https://soundcloud.com",
     "reddit": "https://reddit.com",
     "chatgpt": "https://chat.openai.com",
+    "bard": "https://bard.google.com",
 }
 
 for argument in args[1:]:
