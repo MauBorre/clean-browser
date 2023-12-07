@@ -28,7 +28,8 @@ sites_dict = {
     "reddit": "https://reddit.com",
     "chatgpt": "https://chat.openai.com",
     "bard": "https://bard.google.com",
-    "amazon": "https://amazon.com"
+    "amazon": "https://amazon.com",
+    "whatsapp": "https://web.whatsapp.com/",
 }
 
 for argument in args[1:]:
