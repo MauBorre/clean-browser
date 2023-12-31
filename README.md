@@ -1,6 +1,6 @@
 # clean-browser
 ### Open your favorite website as a desktop app (windows only)
-#### Very useful for working with multiple browser windows and gain visualization space
+intended for working with multiple browser windows and gain visualization space
 
 run:
 `python clean-browser.py $url` <br>
