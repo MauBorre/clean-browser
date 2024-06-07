@@ -4,17 +4,6 @@ import sys
 from threading import Thread
 import argparse
 
-"""
-run:
-python clean-browser.py $url
-or
-python clean-browser.py github twitch <- NEW name the site. Wish it was more flexible tho
-or
-python clean-browser.py github soundcloud.com <- NEW combine urls with sites
-
-"""
-# TODO: integrate an argument parse option so we could call e.g. -chrome -edge, etc...
-
 args = sys.argv
 
 sites_dict = {
@@ -33,18 +22,15 @@ sites_dict = {
 }
 
 for argument in args[1:]:
-
     def match_or_literal(argument):
         if argument in sites_dict.keys():
             return sites_dict[argument]
         # it might be an incomplete url so:
         else:
             return argument if argument.startswith("http") else "https://" + argument
-
     url = match_or_literal(argument)
 
     def find_browser():
-        # TODO: make this a dict so we can choose the preferred browser
         paths = [
             "C:\Program Files\Google\Chrome\Application\chrome.exe",
             "C:\Program Files\BraveSoftware\Brave-Browser\Application\\brave.exe",
