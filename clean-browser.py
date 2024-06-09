@@ -16,9 +16,10 @@ sites_dict = {
     "soundcloud": "https://soundcloud.com",
     "reddit": "https://reddit.com",
     "chatgpt": "https://chat.openai.com",
-    "bard": "https://bard.google.com",
+    "gemini": "https://gemini.google.com/",
     "amazon": "https://amazon.com",
     "whatsapp": "https://web.whatsapp.com/",
+    "kick": "https://kick.com",
 }
 
 for argument in args[1:]:
