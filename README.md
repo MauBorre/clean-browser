@@ -3,10 +3,8 @@ run:
 
 or
 
-`python clean-browser.py github twitch`  <br>
+`python clean-browser.py $site_name`  <br>
 
-or
-
-`python clean-browser.py github soundcloud.com`<br>
+`python clean-browser.py soundcloud.com github`<br>
 
 ![alt text](https://github.com/MauBorre/clean-browser/blob/main/example.png?raw=true)
