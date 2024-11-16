@@ -2,7 +2,15 @@ import os
 import subprocess
 import sys
 from threading import Thread
-import argparse
+
+"""
+run:
+python clean-browser.py $url
+or
+python clean-browser.py github twitch
+or
+python clean-browser.py github soundcloud.com
+"""
 
 args = sys.argv
 
@@ -16,34 +24,32 @@ sites_dict = {
     "soundcloud": "https://soundcloud.com",
     "reddit": "https://reddit.com",
     "chatgpt": "https://chat.openai.com",
-    "gemini": "https://gemini.google.com/",
+    "bard": "https://bard.google.com",
     "amazon": "https://amazon.com",
     "whatsapp": "https://web.whatsapp.com/",
     "kick": "https://kick.com",
+    "mercadolibre": "https://mercadolibre.com.ar",
 }
 
-for argument in args[1:]:
-    def match_or_literal(argument):
-        if argument in sites_dict.keys():
-            return sites_dict[argument]
-        # it might be an incomplete url so:
-        else:
-            return argument if argument.startswith("http") else "https://" + argument
-    url = match_or_literal(argument)
+def match_else_complete(argument):
+    if argument in sites_dict.keys():
+        return sites_dict[argument]
+    else: # it might be an incomplete url so:
+        return argument if argument.startswith("http") else "https://" + argument
 
-    def find_browser():
-        paths = [
-            "C:\Program Files\Google\Chrome\Application\chrome.exe",
-            "C:\Program Files\BraveSoftware\Brave-Browser\Application\\brave.exe",
-            "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
-            "C:\Program Files\Microsoft\Edge\Application\msedge.exe",
-        ]
-        for path in paths:
-            if os.path.exists(path):
-                return path
-        return None
+def find_browser():
+    paths = [
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files\BraveSoftware\Brave-Browser\Application\\brave.exe",
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+    ]
+    for path in paths:
+        if os.path.exists(path):
+            return path
+    return None
 
-    def get_browser_command():
+def get_browser_command(browser_path):
         flags = [
             browser_path,
             f"--user-data-dir=",
@@ -53,12 +59,14 @@ for argument in args[1:]:
         ]
         return flags
 
-    browser_path = find_browser()
-    browser_command = get_browser_command()
+def start_browser(command_flags):
+        subprocess.run(command_flags)
 
-    def start_browser():
-        subprocess.run(browser_command)
+_browser_path = find_browser()
 
+for argument in args[1:]:
+    url = match_else_complete(argument)
+    browser_command = get_browser_command(_browser_path)
     print(f"opening url: {url}")
-    browser_thread = Thread(target=start_browser)
+    browser_thread = Thread(target=start_browser(browser_command))
     browser_thread.start()
