@@ -29,7 +29,8 @@ sites_dict = {
     "whatsapp": "https://web.whatsapp.com/",
     "kick": "https://kick.com",
     "mercadolibre": "https://mercadolibre.com.ar",
-    "gemini": "https://gemini.google.com"
+    "gemini": "https://gemini.google.com",
+    "django": "https://www.djangoproject.com/"
 }
 
 def match_else_complete(argument):
